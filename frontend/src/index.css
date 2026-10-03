@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1a2423;
+  --teal: #0f3d3e;
+  --teal-deep: #0a2a2b;
+  --sand: #f4efe6;
+  --sand-2: #ebe3d4;
+  --gold: #d4a017;
+  --gold-soft: #f2c14e;
+  --coral: #c45c26;
+  --mist: #e8f1f0;
+  --ok: #1f7a4d;
+  --err: #a33b2b;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(242, 193, 78, 0.22), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(15, 61, 62, 0.12), transparent 50%),
+    linear-gradient(180deg, #f7f3eb 0%, #efe7d8 45%, #e7f0ef 100%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: var(--font-display);
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.55s ease both;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.8s ease-in-out infinite;
+}
+
+.spinner {
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 2.5px solid rgba(15, 61, 62, 0.2);
+  border-top-color: var(--teal);
+  border-radius: 999px;
+  animation: spin 0.8s linear infinite;
+}

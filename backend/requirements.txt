@@ -1,0 +1,20 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.0
+aiofiles==24.1.0
+httpx==0.28.1
+numpy==1.26.4
+faster-whisper==1.1.0
+edge-tts==7.2.8
+gTTS==2.5.4
+google-generativeai==0.8.3
+soundfile==0.12.1
+pydub==0.25.1
+pytest==8.3.4
+pytest-asyncio==0.25.0
+# Voice-identity diarization (requires accepting the model terms and HF_TOKEN).
+pyannote.audio==3.3.2
+matplotlib>=3.8.0
